@@ -1,3 +1,4 @@
+---
 apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
 kind: Accelerator
 metadata:
@@ -12,3 +13,18 @@ spec:
       # exclude all but test-one
       /*
       !/test-one
+---
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: test-two
+spec:
+  git:
+    url: https://github.com/trisberg/test-include-ignore.git
+    ref:
+      branch: main
+    subPath: test-two
+    ignore: |
+      # exclude all but test-two
+      /*
+      !/test-two
