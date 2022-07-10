@@ -1,0 +1,9 @@
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: test-one
+spec:
+  git:
+    url: https://github.com/trisberg/test-include-ignore.git
+    ref:
+      branch: main
