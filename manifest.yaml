@@ -7,3 +7,8 @@ spec:
     url: https://github.com/trisberg/test-include-ignore.git
     ref:
       branch: main
+    subPath: test-one
+    ignore: |
+      # exclude all but test-one
+      /*
+      !/test-one
